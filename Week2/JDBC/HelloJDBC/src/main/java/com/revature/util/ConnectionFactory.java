@@ -23,9 +23,9 @@ public class ConnectionFactory {
 	 * 	Endpoint, username and password 
 	 */
 	
-	private static final String URL = "jdbc:postgresql://database-1.cqoseij0k35s.us-east-2.rds.amazonaws.com/postgres";
-	private static final String USERNAME = "planet_user";
-	private static final String PASSWORD = "p4ssw0rd";
+	private static final String URL = ;
+	private static final String USERNAME = ;
+	private static final String PASSWORD = ;
 	
 	private static Connection conn;
 	

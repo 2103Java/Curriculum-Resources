@@ -1,22 +1,27 @@
 package com.revature;
 
-import com.revature.models.Planet;
+import com.revature.presentation.PlanetPresentation;
+import com.revature.repo.MoonDao;
+import com.revature.repo.MoonDaoImpl;
 import com.revature.repo.PlanetDao;
 import com.revature.repo.PlanetDaoImpl;
+import com.revature.service.PlanetService;
 
 public class MainDriver {
 
 	public static void main(String[] args) {
-
-
-
-		PlanetDao pDao  = new PlanetDaoImpl();
 		
+		PlanetDao pDao = new PlanetDaoImpl();
+		MoonDao mDao = new MoonDaoImpl();
 		
-		Planet p = pDao.selectPlanetByName("Earth");
+		PlanetService ps = new PlanetService(pDao,mDao);
 		
-		System.out.println(p);
+		PlanetPresentation pPresentation = new PlanetPresentation(ps);
+		
+		pPresentation.choosePlanet();
 
+
+		
 	}
 
 }
