@@ -23,9 +23,9 @@ public class ConnectionFactory {
 	 * 	Endpoint, username and password 
 	 */
 	
-	private static final String URL = System.getenv("TRAINING_DB_URL");
-	private static final String USERNAME = System.getenv("TRAINING_DB_USERNAME");
-	private static final String PASSWORD = System.getenv("TRAINING_DB_PASSWORD");
+	private static final String URL = "jdbc:postgresql://database-1.cqoseij0k35s.us-east-2.rds.amazonaws.com/postgres";
+	private static final String USERNAME = "planet_user";
+	private static final String PASSWORD = "p4ssw0rd";
 	
 	private static Connection conn;
 	

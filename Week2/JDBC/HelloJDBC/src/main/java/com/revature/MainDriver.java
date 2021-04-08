@@ -12,9 +12,10 @@ public class MainDriver {
 
 		PlanetDao pDao  = new PlanetDaoImpl();
 		
-		Planet p = new Planet(0, "Saturn", true, 40);
 		
-		pDao.insertPlanet(p);
+		Planet p = pDao.selectPlanetByName("Earth");
+		
+		System.out.println(p);
 
 	}
 
