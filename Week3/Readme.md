@@ -72,7 +72,7 @@
       - Retrieving Parameters
   - Deployment Descriptor:
     - web.xml
-    - @WebServlet
+    - WebServlet
     - ServletContext vs ServletConfig
     - Url mapping
     - Load on startup
