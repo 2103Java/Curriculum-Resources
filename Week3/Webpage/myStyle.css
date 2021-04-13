@@ -1,0 +1,12 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+.myClass {
+    color:blue;
+}
+
+#myId {
+    color: aqua;
+}
