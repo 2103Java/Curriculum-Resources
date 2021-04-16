@@ -1,0 +1,102 @@
+Web Services?
+	A service provided over the web
+
+Why?
+	We're not leveraging our hardware - we don't need to worry about local failure.
+	Can communicate more easily. 
+	Don't need much from the client machine. 
+
+
+	Update anomalies: 
+		I can always update the applicaiton. 
+
+	Platform independent: 
+		We can still provide services, regardless of the underlying code. 
+
+	Services don't require a DB. 
+		They don't need DB credentials. 
+
+
+HTTP: 
+	Hypertext Transfer protocol 
+
+	Request 
+		URI - Uniform Resource Identifier
+		Method - Tells the server what to do with payload. 
+		Header - Metadata we provide with our payload 
+		Body - payload 
+
+
+	Response 
+		Status line - 3 digit number, that specifies what happened!
+		Header - metadata we provide with our pay load
+		Body - payload 
+
+
+Methods: 
+
+	GET: Read method
+	POST: Create method
+	PUT: Update method
+	DELETE: Delete method
+	PATCH : partial update that is not idempotent 
+	OPTIONS
+	HEAD
+	TRACE 
+	CONNECT...
+
+	Idempotent : Will have the same outcome, regardless of the number of times it's
+			performed
+			GET is idempotent. 
+			POST is NOT idempotent 
+			PUT is idempotent 
+			DELETE is idempotent 
+			
+
+	Safe: Does not change the state/resources in the server.
+		GET is the only safe method we have. 
+
+(SOAP is a older protocol, this is a messaging protocol)
+
+REST: Representational State Transfer
+	An architecteral style protocol. 
+
+	What kind of information can I send over?
+		Text, JSON and XML. 
+
+	Transfer protcol?
+		HTTP/HTTPS
+
+	RESTful constraints: 
+		1) Stateless - does not keep track of "state", i.e. it only considers
+			the single request. 
+		2) Uniform Interface
+		3) Client-Server 
+		4) Cachaeable
+		5) Layered System
+		6) (Optional) Code on Demand 
+		
+
+
+
+
+Uniform interface
+
+
+	PlanetAPI/api/planet 
+	PlaentAPI/api/moon
+	
+
+
+What design patterns did we use?
+
+	DAO - allows us to abstract away our database calls. 
+	MVC - Model view controller: 
+		Model - business logic 
+		View - user interacts with the system (presentation)
+		controller - bridge between model and view 
+
+	Front Controller Design pattern; 
+	Singelton 
+
+

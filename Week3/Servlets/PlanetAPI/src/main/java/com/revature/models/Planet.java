@@ -4,16 +4,16 @@ public class Planet {
 	
 	private int id;
 	private String name;
-	private double planetMass;
+	private double mass;
 	public Planet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Planet(int id, String name, double planetMass) {
+	public Planet(int id, String name, double mass) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.planetMass = planetMass;
+		this.mass = mass;
 	}
 	public int getId() {
 		return id;
@@ -27,18 +27,16 @@ public class Planet {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getPlanetMass() {
-		return planetMass;
+	public double getMass() {
+		return mass;
 	}
-	public void setPlanetMass(double planetMass) {
-		this.planetMass = planetMass;
+	public void setMass(double mass) {
+		this.mass = mass;
 	}
 	@Override
 	public String toString() {
-		return "Planet [id=" + id + ", name=" + name + ", planetMass=" + planetMass + "]";
+		return "Planet [id=" + id + ", name=" + name + ", mass=" + mass + "]";
 	}
-	
-
 	
 	
 
