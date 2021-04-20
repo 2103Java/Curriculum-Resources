@@ -67,14 +67,31 @@ REST: Representational State Transfer
 	Transfer protcol?
 		HTTP/HTTPS
 
+	If all constraints are met, then we have a RESTful API. 
+	otherwise we have a REST based api. 
+
 	RESTful constraints: 
 		1) Stateless - does not keep track of "state", i.e. it only considers
 			the single request. 
-		2) Uniform Interface
-		3) Client-Server 
-		4) Cachaeable
-		5) Layered System
-		6) (Optional) Code on Demand 
+		2) Uniform Interface : Interface is easy/simple/clear to use. 
+			2.1) Resource based e.g. api/welcome -> welcome.html
+						api/planet -> {name: mars} 
+						api/getAPlanet 
+			2.2) Self descriptive message : the message declares how to process itself. 
+				(cachability) 
+			2.3) Actions on resources through representation : i.e. I can modify the state of the 
+				server with a representation of the object (if I have permission). 
+				
+			2.4) Hypermedia as the Engine of the Application state (HATEOAS):
+				Client and server delivers "states" with each other using 
+				url, http bodies, headers, query/string parameter. 
+
+		3) Client-Server : They are seperate entities. 
+		4) Cachaeable : resources that are cachable are declared implicilty or explicitly as 
+			cachable. 
+		5) Layered System : each layer does not "see" beyond one layer. 
+		6) (Optional) Code on Demand : It allows us to extend the functionality of the frontend 
+			by downloading and executing code from the server. 
 		
 
 

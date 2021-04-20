@@ -68,7 +68,7 @@ function getPlanets(){
 
         }
 
-        let BasePlanetURL = "http://localhost:9000/PlanetAPI/api/planet";
+        let BasePlanetURL = "http://ec2-3-137-146-16.us-east-2.compute.amazonaws.com:9000/PlanetAPI/api/planet";
 
         xhttp.open("GET",BasePlanetURL);
 
