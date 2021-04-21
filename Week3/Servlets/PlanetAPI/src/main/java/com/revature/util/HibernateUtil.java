@@ -26,7 +26,7 @@ public class HibernateUtil {
 			settings.put(Environment.DRIVER, "org.postgresql.Driver");
 			settings.put(Environment.URL, "jdbc:postgresql://database-1.cqoseij0k35s.us-east-2.rds.amazonaws.com/postgres");
 			settings.put(Environment.USER, "postgres");
-			settings.put(Environment.PASS, System.getenv("TRAINING_DB_PASSWORD"));
+			settings.put(Environment.PASS, "p4ssw0rd");
 			settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
 			
 			//Hibernate configruation
