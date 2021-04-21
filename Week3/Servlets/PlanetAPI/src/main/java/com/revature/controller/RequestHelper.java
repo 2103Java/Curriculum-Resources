@@ -7,12 +7,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.revature.dao.PlanetDao;
-import com.revature.dao.PlanetDaoImpl;
+import com.revature.dao.PlanetDaoHibernate;
 import com.revature.service.PlanetService;
 
 public class RequestHelper {
 	
-	PlanetDao pDao = new PlanetDaoImpl();
+	PlanetDao pDao = new PlanetDaoHibernate();
 	PlanetService pService = new PlanetService(pDao);
 	PlanetController pController = new PlanetController(pService);
 

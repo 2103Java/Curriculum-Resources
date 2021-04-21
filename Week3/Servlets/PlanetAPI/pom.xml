@@ -10,13 +10,14 @@
   	<maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   
+  <!-- Front end depndencies  -->
   <dependencies>
   		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>javax.servlet-api</artifactId>
-    <version>4.0.1</version>
-</dependency>
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>4.0.1</version>
+	</dependency>
 
 <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 	<dependency>
@@ -24,7 +25,34 @@
 	    <artifactId>jackson-databind</artifactId>
 	    <version>2.12.2</version>
 	</dependency>
+	
+	
+	<!-- Postgresql Driver -->
+	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.2.18</version>
+</dependency>
 
+	<!-- Hibernate -->
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.10.Final</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+<dependency>
+    <groupId>org.hibernate.validator</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.2.0.Final</version>
+</dependency>
+
+	
+	
   		
   </dependencies>
 </project>

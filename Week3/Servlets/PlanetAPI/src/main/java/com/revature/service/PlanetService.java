@@ -1,5 +1,7 @@
 package com.revature.service;
 
+import java.util.List;
+
 import com.revature.dao.PlanetDao;
 import com.revature.models.Planet;
 
@@ -16,6 +18,10 @@ public class PlanetService {
 		Planet p = pDao.getPlanetById(id);
 		
 		return p;
+	}
+	
+	public List<Planet> getAllPlanets(){
+		return pDao.getAllPlanets();
 	}
 	
 	

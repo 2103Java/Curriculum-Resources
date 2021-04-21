@@ -1,0 +1,54 @@
+What is Agile? 
+	Being able to make changes quickly
+	Developing, in sprints (week to 2 weeks)
+	Meeting with teams regularly, possibly daily standups
+
+	User stories! 
+	I, as a customer should be able to login. 2 pt
+	I, as a employee should be able to register customers. 3 pt 
+
+Waterfall methodolody: 
+	We do all the planning at the start. 
+	Then, we do all the development. 
+	Then, we do all the testing. 
+	Then, we deploy the completed project. 
+
+Lifecycle of a project?
+	
+	Planning : 
+		Requirements Phase (Business Requirements - What do I want to with my app)
+		Analysis Phase (Technical Requirments - What system power do I have)
+		Design phase - Actually designing what we need! 
+
+	Development 
+		Development phase: We building our project. 
+
+	Testing 
+		Testing phase: We're testing our project to ensure it's meeting requirements. 
+
+	Deployment/Maintenance: 
+		Deploying and maintaing our application. 
+
+
+DevOps: 
+	Software Development operations. 
+	Set of practices/ methodologies we incorporate to combine the development 
+	and deployment of an applicaiton. 
+
+DevOps and Agile:
+	Agile practices: 
+		Continous Integration
+		Continous Delivery 
+		Continous Deployment
+
+
+How does Jenkins get itself involved?
+	Jenkins is a open source automation tool. It allows to automate the process of 
+	building, testing and deploying the application. 
+
+There are many CICD tools that we have access to. 
+	Jenkins is open source and very configurable, that's the reason why we use it. 
+
+Downsides of Jenkins?
+	Jenkins is very configurable. 
+		

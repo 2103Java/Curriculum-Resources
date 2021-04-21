@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.dao.PlanetDaoImpl;
 import com.revature.models.Planet;
 import com.revature.service.PlanetService;
 
@@ -26,7 +25,7 @@ public class PlanetController {
 		
 		response.setContentType("json/application");
 		
-		try {
+		
 			int id = Integer.parseInt(request.getParameter("planetId"));
 			
 			p = pService.getPlanet(id);
@@ -37,16 +36,7 @@ public class PlanetController {
 			
 			response.getWriter().write(om.writeValueAsString(p));
 			
-		}catch(Exception e) {
-			
-			ObjectMapper om = new ObjectMapper();
-			
-			response.setStatus(200);
-			
-			response.getWriter().write(om.writeValueAsString(PlanetDaoImpl.planetList));
-			
-			
-		}
+		
 		
 		
 		
