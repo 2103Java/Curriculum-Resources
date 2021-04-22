@@ -78,8 +78,14 @@ public class PlanetDaoHibernate implements PlanetDao {
 
 	@Override
 	public List<Planet> getAllPlanets() {
-		// TODO Auto-generated method stub
-		return null;
+
+		Session session = HibernateUtil.getSession();
+		
+		List<Planet> planetList = null;
+		
+		planetList = session.createQuery("from Planet",Planet.class).list();
+		
+		return planetList;
 	}
 	
 	

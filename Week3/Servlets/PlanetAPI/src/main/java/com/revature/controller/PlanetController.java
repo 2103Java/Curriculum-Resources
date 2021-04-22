@@ -1,6 +1,7 @@
 package com.revature.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -25,16 +26,36 @@ public class PlanetController {
 		
 		response.setContentType("json/application");
 		
-		
-			int id = Integer.parseInt(request.getParameter("planetId"));
+			Integer id = null;
 			
-			p = pService.getPlanet(id);
+			try {
+				id = Integer.parseInt(request.getParameter("planetId"));
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 			
-			ObjectMapper om = new ObjectMapper();
 			
-			response.setStatus(200);
+			if(id == null) {
+				
+				List<Planet> planetList = pService.getAllPlanets();
+				
+				ObjectMapper om = new ObjectMapper();
+				
+				response.getWriter().write(om.writeValueAsString(planetList));
+				
+			}else {
+				
+				p = pService.getPlanet(id);
+				
+				ObjectMapper om = new ObjectMapper();
+				
+				response.setStatus(200);
+				
+				response.getWriter().write(om.writeValueAsString(p));
+				
+			}
 			
-			response.getWriter().write(om.writeValueAsString(p));
+			
 			
 		
 		
