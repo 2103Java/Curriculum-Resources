@@ -1,0 +1,34 @@
+Before VM: 
+	Have all our apps running on a bare metal server. Difficult to manage
+	how much resource our application consume. We get another server, to run 
+	seperate applications. Costly and slow. 
+
+What is a VM?
+	Virtual Machines are virtulized at the hardware level. 
+	The Hypervisor is what manages the seperation between the hardware
+	and the virtual machine. 
+	We can have a seperate OS in our VM. 
+	
+Why do want VM?
+	We get isolated environments, if a single VM fails then none of the 
+	other VMs are affected (barring hardware failure).
+	We can have different environemnts for testing, deploying, produciton. 
+	All inside the same machine. 
+
+	VMs allow us to restrict how much system an app can "see", 
+
+	Simulated computer inside my computer.
+	(It's simulated because I can change the hardrive, with a number)
+
+
+
+What are containers?
+	VMs can be viewed as hardware virtulization. 
+	Container can be viewed as OS virtualization. 
+
+	Containers can be used within virtual machines. 
+
+	>Much smaller in size compared to VM (megabytes compared to gigabytes)
+		(allows quicker boot up time)
+	> Much more portable than VMs because they share the same OS as the host machine. 
+	> There is less management overhead because they share the same OS. 

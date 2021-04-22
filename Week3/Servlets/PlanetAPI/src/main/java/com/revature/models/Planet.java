@@ -34,6 +34,8 @@ public class Planet {
 	
 	@Column(name = "planet_mass")
 	private double mass;
+	
+	
 
 	public int getId() {
 		return id;
