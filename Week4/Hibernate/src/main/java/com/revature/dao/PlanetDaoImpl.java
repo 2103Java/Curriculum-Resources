@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import com.revature.models.Planet;
 import com.revature.util.HibernateUtil;
@@ -27,6 +28,8 @@ public class PlanetDaoImpl implements PlanetDao {
 		
 		sesh.save(p);
 		
+		
+		
 		tx.commit();
 //		sesh.close(); We have a global session now!
 
@@ -42,6 +45,9 @@ public class PlanetDaoImpl implements PlanetDao {
 		planetList = sesh.createQuery("from Planet",Planet.class).list();
 		
 		
+		planetList = sesh.createQuery("from Planet where name = 'Earth'" ,Planet.class).list();
+		
+		
 //		sesh.close(); We have a global session now!
 		
 		return planetList;
@@ -53,10 +59,12 @@ public class PlanetDaoImpl implements PlanetDao {
 		List<Planet> planetList = null;
 		Session sesh = HibernateUtil.getSession();
 		
+		
 		//HQL 
 		planetList = sesh.createQuery("from Planet where name = '" + name + "'",Planet.class).list();
 		
-		
+		//Criteria API - this is deprecated. Criteria builder is more modern, but it's a lot of line of code. 
+		planetList = sesh.createCriteria(Planet.class).add(Restrictions.ilike("name", name)).list();
 //		sesh.close(); We have a global session now!
 		
 		return planetList;

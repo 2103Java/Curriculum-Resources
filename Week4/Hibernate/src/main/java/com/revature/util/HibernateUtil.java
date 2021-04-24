@@ -15,6 +15,46 @@ import com.revature.models.Planet;
 
 public class HibernateUtil {
 	
+	/*
+	 * What have we used in Hibernate?
+	 * 
+	 * 		Configuration
+	 * 			Parses our configuration into our session f
+	 * 
+	 * 		SessionFactory 
+	 * 			It creates sessions and stores information on HOW to connect to our database. 
+	 * 
+	 * 		Session 
+	 * 			Manages our connection to the database. 
+	 * 			CRUD operations. 
+	 * 
+	 * 		Transactions
+	 * 			Transaction...well...manage our transacitons. 
+	 * 
+	 * 			ACID:
+	 * 				Atomicity 
+	 * 				Consistency 
+	 * 				Isolation
+	 * 				Durability 
+	 * 
+	 * 		HQL Queries 
+	 * 
+	 * 		Annotations: 
+	 * 			fetchstrategy = eager, lazy 
+	 * 			table 
+	 * 			entity 
+	 * 			id
+	 * 			column( nullable , unique)
+	 * 			GeneratedValue
+	 * 	
+	 * 		POJO* 
+	 * 
+	 * 		
+	 * 			
+	 * 
+	 */
+	
+	
 	private static SessionFactory sf = getSessionFactory();
 //	private static SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	
