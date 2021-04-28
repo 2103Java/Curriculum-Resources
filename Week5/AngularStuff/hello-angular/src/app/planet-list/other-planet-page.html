@@ -1,0 +1,67 @@
+
+
+<!-- My Goal is to create a dynamic page to display my planets!-->
+
+<div class='panel panel-primary'>
+
+    <div class = 'panel-heading'>
+        <h1>HELLO {{user}}, you're age is {{age + 1}}!</h1>
+    </div>
+
+
+    <div class = "panel-body">
+
+        <div class = "row">
+            <div class = 'col-md-2'>Filter By: </div>
+            <div class = 'col-md-4'>
+
+                <!-- 
+                    The [()] syntax is used for 2-way binding. Also refered to as 'apple in a box'
+                    The HTML values and TS are tied to each each other. If one changes, the other changes. 
+                    Hence, '2-way' binding.
+
+                    -->
+
+                <input type = 'text' [(ngModel)] = 'inputField' placeholder="filter">
+                </div>
+        </div>
+        <div class = 'row'>
+            <h3> My Filter: {{inputField}}</h3>
+        </div>
+    </div>
+
+</div>
+
+<div class = 'table-responsive'>
+
+    <button class='btn btn-primary' (click) = 'toggleTable()'>
+        {{showTable? 'Hide Table':'Show Table'}}
+    </button>
+
+    <table class = 'table' *ngIf = 'filteredPlanets.length && showTable'>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Livibility Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let i of filteredPlanets'>
+                <td>
+                    <img [src] = 'i.image' [alt] = 'i.name'
+                        [style.width.px] = 'imageWidth'
+                        [style.margin.px] = 'imageMargin'>
+                </td>
+                <td [appColourDirective] >
+                    {{i.name | prependpipe: 'Planet: '}}
+                </td>
+                <td>
+                    {{i.livibility}}
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
