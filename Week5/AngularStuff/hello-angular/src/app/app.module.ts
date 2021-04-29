@@ -9,6 +9,7 @@ import { PlanetListComponent } from './planet-list/planet-list.component';
 import { PlanetServiceService } from './shared/planet-service.service';
 import { PrependpipePipe } from './prependpipe.pipe';
 import { ColourDirectiveDirective } from './shared/colour-directive.directive';
+import { RatingStarsComponent } from './shared/rating-stars/rating-stars.component';
 
 //This is another decorator
 // Declares the existence and location of all our angular files. 
@@ -21,7 +22,8 @@ import { ColourDirectiveDirective } from './shared/colour-directive.directive';
     ProfileComponent,
     PlanetListComponent,
     PrependpipePipe,
-    ColourDirectiveDirective
+    ColourDirectiveDirective,
+    RatingStarsComponent
   ],
   imports: [ // used to import external modules 
     BrowserModule,

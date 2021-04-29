@@ -1,0 +1,58 @@
+Itenary for the day: 
+
+Angular Folder structure:
+
+	node_modules: libraries/dependencies that our angular project is going
+			to use
+	package.json: is the configuration for our Angular project. It's a JSON
+			file - similar to our pom.xml in maven. 
+
+	e2e :folder containing the end to end tesitng. 
+
+	src: 
+		index.html: angular supports SPA, so we have a "global" html file. 
+		style.css: global style for our app. 
+
+	Webpack: 
+		Usd to bundle JavaScript modules into a few/singl Javascript file(s)
+		(A module is just a file, one script is one module). 
+		Modules can be exported and imported by other modules. 
+
+
+Directives :
+
+	Structual Directive: 
+		Modifies the DOM structure. Structural directive begin with a *
+		e.g. *ngIf and *ngFor, ngSwitch
+	Attribute Directive: 
+		syntax [directive-name], this adds a programtic custom attribute
+		to elements. 
+
+Component:
+	Is defined via it's decorator: @Component. 
+	@Component has 3 attributes to be deinfed: for the view, for the styling 
+		and for 'selecting' it. 
+	Consists of 4 files: 
+			.html, .css, .ts, .spec.ts 
+	Bindings: 
+		1- way : Interpolation
+		{{}} this is the syntax for interpolation. Interpolation evaluates 
+		an expression. Beyond referencing values from .ts we can also do basic
+		operations. 
+		One way binding (w/Interpolation) projects values from TS into the 
+		HTML page. Any changes to TS will be reflected in our HTML. 
+		
+		2- way: using ngModel
+		[()] this causes a value to be tied together in TS and HTML
+
+		event:
+		() this will trigger a function based on an event. 
+
+		property 
+		[] this will bind attributes of elements to TS properties. 
+
+Pipes 
+
+Service
+
+Routing 
