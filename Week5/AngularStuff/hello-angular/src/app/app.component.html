@@ -3,5 +3,37 @@
     This is the root html tag: If we want to add our own components, we add them via tags. 
 -->
 
-<planet-list></planet-list>
+
+
+<div>
+    <nav class = "navbar navbar-default">
+        <div class = 'container fluid'>
+            <a> Hello to my NavBar!</a>
+        </div>
+        <ul class = 'nav navbar-nav'>
+            <li class ='nav-item'>
+                <a href = '/planets'>Planets</a>
+                <a routerLink = '/planets'>Planets but faster</a>
+            </li>
+            <li class = 'nav-item'>
+                <a href = '/pokemon'>Pokemon</a>
+                <a routerLink = '/pokemon'>Pokemon but faster</a>
+            </li>
+            <li class = 'nav-item'>
+                <a href = '/profile/1'>Profile</a>
+                <a routerLink = '/profile/2'>Profile but faster</a>
+            </li>
+            <li  class = 'nav-item'>
+                <a href = '/welcome'>Welcome</a>
+                <a routerLink = '/welcome'>Welcome but faster</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>
 <!-- <planet-list></planet-list> -->
+<!--we need a placeholder tag that can swtich bettween the seperate components 
+    <example></example> -> planet list or app-pokemon-list 
+-->
+

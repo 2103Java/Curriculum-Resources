@@ -19,8 +19,11 @@ export class RatingStarsComponent implements OnInit , OnChanges{
 
   onStarClick(): void {
     
-    this.starClicked.emit(`The score is ${this.score}. (From the star component)`)
+    this.starClicked.emit(`The score is ${this.score}. (From the star component)`);
+
+
   }
+
 
   starWidth: number;
 

@@ -10,6 +10,9 @@ import { PlanetServiceService } from './shared/planet-service.service';
 import { PrependpipePipe } from './prependpipe.pipe';
 import { ColourDirectiveDirective } from './shared/colour-directive.directive';
 import { RatingStarsComponent } from './shared/rating-stars/rating-stars.component';
+import { PokemonComponentComponent } from './pokemon/pokemon-component/pokemon-component.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { HttpClientModule } from '@angular/common/http';
 
 //This is another decorator
 // Declares the existence and location of all our angular files. 
@@ -23,12 +26,15 @@ import { RatingStarsComponent } from './shared/rating-stars/rating-stars.compone
     PlanetListComponent,
     PrependpipePipe,
     ColourDirectiveDirective,
-    RatingStarsComponent
+    RatingStarsComponent,
+    PokemonComponentComponent,
+    WelcomeComponent
   ],
   imports: [ // used to import external modules 
     BrowserModule,
     AppRoutingModule,
-    FormsModule //ngModel comes from this library 
+    FormsModule, //ngModel comes from this library 
+    HttpClientModule
   ],
   providers: [ //used to declare services
     /**
