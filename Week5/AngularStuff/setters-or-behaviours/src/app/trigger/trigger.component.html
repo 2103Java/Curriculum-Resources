@@ -1,0 +1,11 @@
+<div>
+    <p>trigger works!</p>
+    <p> Here is your input: {{input}}</p>
+    <p> Here is the service message: {{recapturedMessage}}</p>
+    <input type='text' [(ngModel)]='input'>
+    <button (click) = 'changeMessageWithSetter()'>Using Setter!</button>
+    <button (click) = 'grabMessageWithGetter()'>Using Getter!</button>
+    <button (click) = 'usingBehaviouralForMessage()'>Using Observables!</button>
+
+</div>
+
