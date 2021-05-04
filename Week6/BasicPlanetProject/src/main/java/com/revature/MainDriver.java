@@ -4,7 +4,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.revature.controllers.Controller;
-import com.revature.servlet.MasterServlet;
+import com.revature.dao.PlanetDao;
+import com.revature.models.Planet;
+import com.revature.service.PlanetService;
 
 public class MainDriver {
 	
@@ -53,27 +55,51 @@ public class MainDriver {
 	 * 			creating and managing our objects!
 	 */
 	
-	private static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-manual.xml");
+//	private static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-manual.xml");
+//	private static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-autowire.xml");
+	private static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-annotations.xml");
 	
 	public static void main(String[] args) {
 		
 	
-		
-		MasterServlet masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
-		masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
-		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
-		masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
-		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
-		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
-		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
+//		Configured using beans-manual
+//		MasterServlet masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
+//		masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
+//		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
+//		masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
+//		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
+//		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
+//		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
 		
 		
 //		masterServlet.onceMoreHelloButInFrench();
 //		
 
 		
+		//Configured using beans-autowire
 		
+//		PlanetService pService = appContext.getBean("PlanetServiceFIRST",PlanetService.class);
+//		pService.sayHello();
+		
+//		Controller controller = appContext.getBean("PlanetControllerFIRST",Controller.class);
+//		controller.sayHelloAgain();
+		
+//		MasterServlet mServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
+//		mServlet.onceMoreHelloButInFrench();
+		
+		
+		//Configured using full annotations
+//		PlanetDao pDao = appContext.getBean("PlanetDaoBean",PlanetDao.class);
+//
+//		pDao.insertPlanet(new Planet());
 
+//		PlanetService pService = appContext.getBean("PlanetServiceImpl",PlanetService.class);
+//		
+//		pService.sayHello();
+		
+		Controller controller = appContext.getBean("controller",Controller.class);
+		
+		controller.sayHelloAgain();
 	}
 
 }

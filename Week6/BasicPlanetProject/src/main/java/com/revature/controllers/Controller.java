@@ -1,10 +1,27 @@
 package com.revature.controllers;
 
+import org.springframework.stereotype.Component;
+
 import com.revature.service.PlanetService;
 
+@Component("controller")
 public class Controller {
 	
 	private PlanetService pService;
+	
+	
+	
+	
+
+
+	public Controller(PlanetService pService) {
+		this.pService = pService;
+	}
+	
+	public Controller() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 
 	public PlanetService getpService() {

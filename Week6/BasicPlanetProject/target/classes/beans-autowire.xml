@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<!-- 
+	
+	
+			What is Autowiring?
+					Autowiring is when Spring scans your objects in your project to determine WHICH dependenices it needs. 
+					
+			Injection vs Autowiring?
+				Injection is HOW wer're injecting our dependencies. 
+				Autowiring is WHICH depndencies we're injecting. 
+				
+			Autowiring options: 
+				"no": no autowiring is done (default)
+				"byType": means Spring will check the clases and match them to what's in our project
+				"byName": will check the name of the fields and match them to the beans that have been defined. 
+				"Constructor": works similarly to byType but it injects using the constructor injection. It will first check the type 
+						and then failing that, it will try the nyName strategy. 
+	 -->
+
+	<bean name = "pDao" class="com.revature.dao.PlanetDaoImpl"></bean>
+	
+	<!-- using setter injection and byName autowiring.  -->
+	<bean name ="PlanetServiceFIRST" class="com.revature.service.PlanetServiceImpl" autowire="byType"></bean>
+	
+	<!-- using constructor injection and detecting our dependencies based on the constructor arguments -->
+	<bean name = "controller" class="com.revature.controllers.Controller" autowire="constructor"></bean>
+	
+	<bean name = "MasterServletFIRST" class="com.revature.servlet.MasterServlet" autowire="constructor"></bean>
+	
+	<bean name = "MasterServletSECOND" class="com.revature.servlet.MasterServlet" autowire="byName"></bean>
+	
+</beans>
