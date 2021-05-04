@@ -1,0 +1,79 @@
+package com.revature;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.revature.controllers.Controller;
+import com.revature.servlet.MasterServlet;
+
+public class MainDriver {
+	
+	/*
+	 * What is Spring Boot?
+	 * 		Like a really.... straight forward to make servlet and rest api.
+	 * 		A framework in which we could in which the handling of the rest is VERY EASY. using annotations. get annotation.
+	 * 		A lot of annotations. 
+	 * 
+	 * 
+	 * What is Spring?
+	 * 		Spring is a module based, open source, AOP (Aspect oriented programming) framework. 
+	 * 			It provides support for enterprise scale applications. 
+	 * 			It provides infrastructure so that we can focus on the business logic. 
+	 * 
+	 * What are modules in Spring?
+	 * 		Core, Context, ORM, AOP, Security, Tests, Beans, etc....
+	 * 		(These modules look a lot like dependencies)
+	 * 
+	 * How does Spring achieve it's goals - i.e. what features does Spring have for us?
+	 * 
+	 * 		IoC Container - Inversion of Control Container 
+	 * 		AOP
+	 * 		MVC Design patterns
+	 * 		A LOT OF ABSTRACTED APIs
+	 */
+
+	/*
+	 * What is ApplicaitonContext? 
+	 * 		It's a child class of BeanFacroty
+	 * 
+	 * What's a BeanFActory?
+	 * 		It makes and manages Beans. 
+	 * 
+	 * Why don't I use a BeanFactory?
+	 * 		Because AppContext has more features and the only the use case for beanfactory is if performance is REALLY REALLY important. 
+	 * 
+	 * 
+	 * ApplicationContext:
+	 * 		Is a type of BeanFactory (Is Spring's IoC container)
+	 * 
+	 * 		BeanFacgtory contains information regarding the beans you have defined in your project. 
+	 * 
+	 * 		Bean: 
+	 * 			Is an object that is instantaited and managed by Spring's container. We are no longer responsible for 
+	 * 			creating and managing our objects!
+	 */
+	
+	private static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-manual.xml");
+	
+	public static void main(String[] args) {
+		
+	
+		
+		MasterServlet masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
+		masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
+		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
+		masterServlet = appContext.getBean("MasterServletSECOND",MasterServlet.class);
+		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
+		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
+		masterServlet = appContext.getBean("MasterServletFIRST",MasterServlet.class);
+		
+		
+//		masterServlet.onceMoreHelloButInFrench();
+//		
+
+		
+		
+
+	}
+
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		
+		
+		<!-- 
+				SCOPE:
+					Singleton (default) tells Spring to only create a single instance of the bean. 
+					Prototype tells Spring that whenever someone requests for that bean, THEN create one. 
+					Session
+					Request
+					GlobalSession
+				
+				
+				BEAN WIRING:
+					Bean wiring is the process of telling spring to manage objects for us. 
+					
+					Types of injections: 
+							Construcytor
+							Setter 
+							Field 
+							Interface (extra)
+			
+		 -->
+		
+		
+	<!--  Below is where we define a DAO object for Spring to manage -->
+	<!-- A SPRING bean has nothing to do with a JAVA bean -->
+	<bean name = "PlanetDaoFIRST" class="com.revature.dao.PlanetDaoImpl"></bean>
+	<bean name = "PlanetDaoSECOND" class="com.revature.dao.PlanetDaoImplButBetter"></bean>
+
+	<!-- CONSTRUCTOR INJECTION -->
+	<bean name = "PlanetServiceFIRST" class="com.revature.service.PlanetServiceImpl">
+		<constructor-arg index="0" ref="PlanetDaoFIRST"></constructor-arg>
+		<constructor-arg index="1" type="String" value="Kiwi"></constructor-arg>
+	</bean>
+	
+	<!-- SETTER INJECTION -->
+	<bean name = "PlanetServiceSECOND" class="com.revature.service.PlanetServiceImpl">
+		<property name="pDao" ref="PlanetDaoSECOND"></property>
+	</bean>
+	
+	<bean name="PlanetControllerFIRST" class="com.revature.controllers.Controller">
+		<property name="pService" ref="PlanetServiceSECOND"></property>
+	</bean>
+	
+	<bean name="PlanetControllerSECOND" class="com.revature.controllers.Controller">
+		<property name="pService" ref="PlanetServiceFIRST"></property>
+	</bean>
+
+	<bean name="MasterServletFIRST" class="com.revature.servlet.MasterServlet" scope="prototype">
+		<constructor-arg index="0" ref="PlanetControllerFIRST"></constructor-arg>
+	</bean>
+	
+	<bean name="MasterServletSECOND" class="com.revature.servlet.MasterServlet">
+		<property name="controller" ref="PlanetControllerFIRST"></property>
+	</bean>
+	
+</beans>
