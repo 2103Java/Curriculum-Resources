@@ -8,9 +8,13 @@ import com.revature.models.Planet;
 public class PlanetDaoImpl implements PlanetDao {
 
 	@Override
-	public boolean insertPlanet(Planet p) {
+	public Boolean insertPlanet(Planet p) {
 		// TODO Auto-generated method stub
-		return true;
+		return (Boolean) true;
+	}
+	
+	public void randomMethod(String random) {
+		
 	}
 
 }

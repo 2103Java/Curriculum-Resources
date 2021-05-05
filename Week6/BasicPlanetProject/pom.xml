@@ -45,6 +45,7 @@
     <version>5.3.5</version>
 </dependency>
   	
+  	<!-- SPRING ASPECTS -->
   	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
 <dependency>
     <groupId>org.springframework</groupId>
@@ -52,6 +53,11 @@
     <version>5.3.5</version>
 </dependency>
   	
+  	<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>
   	
   
   </dependencies>

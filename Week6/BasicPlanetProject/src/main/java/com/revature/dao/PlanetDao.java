@@ -10,6 +10,6 @@ public interface PlanetDao {
 	 * CRUD operations
 	 */
 	
-	public boolean insertPlanet(Planet p);
+	public Boolean insertPlanet(Planet p);
 
 }

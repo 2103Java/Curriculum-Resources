@@ -57,7 +57,7 @@ public class MainDriver {
 	
 //	private static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-manual.xml");
 //	private static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-autowire.xml");
-	private static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-annotations.xml");
+	public  static ApplicationContext appContext = new ClassPathXmlApplicationContext("beans-annotations.xml");
 	
 	public static void main(String[] args) {
 		
@@ -100,6 +100,8 @@ public class MainDriver {
 		Controller controller = appContext.getBean("controller",Controller.class);
 		
 		controller.sayHelloAgain();
+		
+		controller.anotherMethod(false, 0, null);
 	}
 
 }

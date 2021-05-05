@@ -1,5 +1,6 @@
 package com.revature.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.revature.service.PlanetService;
@@ -7,6 +8,7 @@ import com.revature.service.PlanetService;
 @Component("controller")
 public class Controller {
 	
+	@Autowired
 	private PlanetService pService;
 	
 	
@@ -35,6 +37,10 @@ public class Controller {
 	public void sayHelloAgain() {
 		this.pService.sayHello();
 		System.out.println("Hello from controller!");
+	}
+	
+	public String anotherMethod(Boolean a,Integer b, String c) {
+		return "0";
 	}
 	
 
