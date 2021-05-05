@@ -52,12 +52,51 @@
     <artifactId>spring-aspects</artifactId>
     <version>5.3.5</version>
 </dependency>
+
+<!-- SPRING LOMBOK -->
+<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.16</version>
+    <scope>provided</scope>
+</dependency>
+
   	
+  	<!--  LOG4J -->
   	<dependency>
-		    <groupId>log4j</groupId>
-		    <artifactId>log4j</artifactId>
-		    <version>1.2.17</version>
-		</dependency>
+	    <groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
+  	
+  	
+  	<!-- All the Spring ORM dependencies  -->
+  	
+  	<!-- POSTGRESQL DRIVER -->
+  	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.2.19</version>
+</dependency>
+  	
+  	
+  	<!-- HIBERNATE -->
+  	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.30.Final</version>
+</dependency>
+
+	<!-- SPRING ORM -->
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+    <version>5.3.5</version>
+</dependency>
   	
   
   </dependencies>

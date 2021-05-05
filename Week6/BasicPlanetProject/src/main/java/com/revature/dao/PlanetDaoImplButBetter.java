@@ -1,5 +1,7 @@
 package com.revature.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 import com.revature.models.Planet;
@@ -16,6 +18,36 @@ public class PlanetDaoImplButBetter implements PlanetDao{
 	
 	public void randomMethodAgain(int a, boolean b, String c) {
 		
+	}
+
+	@Override
+	public Planet selectPlanetById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Planet selectPlanetByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Planet> selectAllPlanet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean updatePlanet(Planet p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean deletePlanet(Planet p) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

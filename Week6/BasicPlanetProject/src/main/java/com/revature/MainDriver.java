@@ -3,10 +3,10 @@ package com.revature;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.revature.controllers.Controller;
-import com.revature.dao.PlanetDao;
+import com.revature.models.Moon;
 import com.revature.models.Planet;
-import com.revature.service.PlanetService;
+
+
 
 public class MainDriver {
 	
@@ -97,11 +97,25 @@ public class MainDriver {
 //		
 //		pService.sayHello();
 		
-		Controller controller = appContext.getBean("controller",Controller.class);
+//		Controller controller = appContext.getBean("controller",Controller.class);
+////		
+//		controller.sayHelloAgain();
+//		
+//		controller.anotherMethod(false, 0, null);
 		
-		controller.sayHelloAgain();
+		System.out.println("Hello!");
 		
-		controller.anotherMethod(false, 0, null);
+		
+		//Using Lombok 
+		
+		Planet p = new Planet(0,"Earth");
+		
+		System.out.println(p.getId());
+		p.setName("Mars");
+		System.out.println(p.getName());
+		System.out.println(p);
+		
+		Moon m = new Moon(0, null, 0);
 	}
 
 }

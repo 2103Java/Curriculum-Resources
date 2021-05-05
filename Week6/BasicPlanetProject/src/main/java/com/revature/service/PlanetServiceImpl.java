@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import com.revature.dao.PlanetDao;
 import com.revature.models.Planet;
 
-@Component("PlanetServiceImpl")
+//@Component("PlanetServiceImpl")
 public class PlanetServiceImpl implements PlanetService {
 	
 	@Autowired

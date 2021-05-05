@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.revature.service.PlanetService;
 
-@Component("controller")
+//@Component("controller")
 public class Controller {
 	
 	@Autowired
