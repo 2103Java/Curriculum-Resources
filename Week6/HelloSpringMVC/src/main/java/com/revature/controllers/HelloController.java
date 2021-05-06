@@ -25,7 +25,7 @@ public class HelloController {
 	
 	@RequestMapping(value = "/bonjour")
 	public String greetingsInGreek() {
-		return "hallo";
+		return "hallo"; //This will cause it to be forwarded to /mvc/greetings/hello
 	}
 
 }
