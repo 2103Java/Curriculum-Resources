@@ -37,6 +37,8 @@ public class PlanetDaoImpl implements PlanetDao {
 //		tx.commit();
 //		ses.close();
 		
+		//In a single threaded environment, this can be faster as well. 
+		
 		sessionFactory.getCurrentSession().save(p);
 		
 		return true;
@@ -59,9 +61,10 @@ public class PlanetDaoImpl implements PlanetDao {
 	}
 
 	@Override
+//	@Transactional
 	public List<Planet> selectAllPlanet() {
 		
-		return null;
+		return sessionFactory.getCurrentSession().createQuery("from Planet", Planet.class).list();
 	}
 
 	@Override

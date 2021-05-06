@@ -61,23 +61,23 @@ public class MyAspect {
 	 */
 	
 	
-	@Before("execution(* *(..))") //PointCut
+//	@Before("execution(* *(..))") //PointCut
 //	@Before("execution(String *(..))") //targetting all methods that return String
 //	@Before("execution(boolean *(..))") //targetting all methods that return boolean 
 //	@Before("execution(* *(boolean,..))") ///targetting methods that have arguments beginning with boolean 
 	//target methods in com.revature.controllers 
-	public void doingMyLogs(JoinPoint jP) {
-		
-		final Logger loggy = Logger.getLogger(jP.getTarget().getClass());
-		
-		loggy.info("Before logging and the number of methods that have been invoked are " + number);
-	
-	}
+//	public void doingMyLogs(JoinPoint jP) {
+//		
+//		final Logger loggy = Logger.getLogger(jP.getTarget().getClass());
+//		
+//		loggy.info("Before logging and the number of methods that have been invoked are " + number);
 //	
-	@After("execution(* *(..))")
-	public void trackingMethodsInvoked() {
-		number++;
-	}
+//	}
+//	
+//	@After("execution(* *(..))")
+//	public void trackingMethodsInvoked() {
+//		number++;
+//	}
 	
 //	@Around("execution(* *(..))")
 //	public void veryPowerfulAdvice(ProceedingJoinPoint pjp) throws Throwable {

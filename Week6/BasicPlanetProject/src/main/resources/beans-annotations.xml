@@ -3,19 +3,28 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 	<!-- We don't manually define any more beans in xml -->
 	
-	<!-- This will turn on our annotations -->
+	<!-- This will turn on our annotations for spring core-->
 	<context:annotation-config/>
 	
 	<!-- This will scan every package inside of com/revature/... folders  -->
 	<context:component-scan base-package="com.revature"/>
 	
+	<!--  This will turn on on our aspects -->
 	<aop:aspectj-autoproxy/>
+	
+	<!--  NOTE!!!!!!!! : I forgot to turn on annotations for tx, so this will allow us to get contextual sessions 
+		(Make sure to add "tx" onto your namespace as well)
+	-->
+	<tx:annotation-driven/>
+	
 	
 	<!-- 
 		What do we need to know to persist information to our database

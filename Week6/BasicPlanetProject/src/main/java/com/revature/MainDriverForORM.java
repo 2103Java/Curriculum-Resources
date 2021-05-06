@@ -27,6 +27,11 @@ public class MainDriverForORM {
 		pDao.insertPlanet(p3);
 		pDao.insertPlanet(p4);
 		pDao.insertPlanet(p5);
+		
+		
+		System.out.println(pDao.selectAllPlanet());
+		
+		
 	}
 
 }
