@@ -69,6 +69,19 @@ public class FoodController {
 	}
 	
 	
+	/*
+	 * Request: 
+	 * 		URI X
+	 * 		Method X
+	 * 		Headers X
+	 * 		Body X
+	 * 
+	 * Response: 
+	 * 		Status Code X
+	 * 		Headers X
+	 * 		Body X
+	 */
+	
 	
 
 }

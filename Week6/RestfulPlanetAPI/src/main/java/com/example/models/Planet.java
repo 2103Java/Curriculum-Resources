@@ -1,4 +1,4 @@
-package com.revature.models;
+package com.example.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,6 +27,6 @@ public class Planet {
 	private String name;
 	
 	@Column(name="planet_mass")
-	private double mass;
+	private int mass;
 
 }

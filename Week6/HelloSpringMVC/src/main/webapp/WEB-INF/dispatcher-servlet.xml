@@ -15,5 +15,13 @@
 	<!-- This will turn on our mvc annotations -->
 	<mvc:annotation-driven/>
 	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/html/super/nested/folder/</value>
+		</property>
+		<property name="suffix">
+			<value>.html</value>
+		</property>
+	</bean>
 
 </beans>

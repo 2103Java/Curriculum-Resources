@@ -16,12 +16,12 @@ public class MainDriverForORM {
 		PlanetDao pDao = appContext.getBean("PlanetDao",PlanetDao.class);
 //		PlanetDao pDao = appContext.getBean("PlanetDaoBetterBean",PlanetDao.class);
 		
-		Planet p = new Planet(0,"Earth 1");
-		Planet p1 = new Planet(0,"Earth 2");
-		Planet p2 = new Planet(0,"Earth 3");
-		Planet p3 = new Planet(0,"Earth 4");
-		Planet p4 = new Planet(0,"Earth 5");
-		Planet p5 = new Planet(0,"Mars");
+		Planet p = new Planet(0,"Earth 1", 0);
+		Planet p1 = new Planet(0,"Earth 2", 0);
+		Planet p2 = new Planet(0,"Earth 3", 0);
+		Planet p3 = new Planet(0,"Earth 4", 0);
+		Planet p4 = new Planet(0,"Earth 5", 0);
+		Planet p5 = new Planet(0,"Mars", 0);
 		pDao.insertPlanet(p1);
 		pDao.insertPlanet(p2);
 		pDao.insertPlanet(p3);
