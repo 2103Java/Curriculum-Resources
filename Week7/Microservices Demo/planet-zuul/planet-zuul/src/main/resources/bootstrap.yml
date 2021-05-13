@@ -1,0 +1,31 @@
+#Zuul configuration
+
+server:  port: 5100
+  
+spring:
+  application:
+    name: planet-zuul 
+    
+    
+ #Now we start going Zuul specific 
+ #Ribbon is built into Zuul so we don't need to do much configuration
+zuul:
+  ignored-patterns: /actuator/**
+  routes:
+   apple-pie:
+     path: "/test/hello"
+     service-id: planet-one
+     strip-prefix: false 
+   bread-pudding:
+     path: "/planets"
+     service-id: planet-two
+     strip-prefix: false
+   chocolate-cupcake:
+     path: "/planets/**" # ** = /app/whatever/anything vs * = /endpoint
+     service-id: planet-three
+     strip-prefix: false 
+   chocolate-lasagne:
+     path: "/*"
+     service-id: planet-four
+     strip-prefix: false
+  

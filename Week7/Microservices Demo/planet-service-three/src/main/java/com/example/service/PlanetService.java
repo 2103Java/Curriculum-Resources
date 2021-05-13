@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.example.models.Planet;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class PlanetService {
@@ -35,10 +34,10 @@ public class PlanetService {
 		this.restTemplate= restTemplate;
 	}
 	
-	
+	@HystrixCommand(fallbackMethod = "securePlanetMethod")
 	public List<Planet> getRockyPlanets(){
 		
-		URI uri = URI.create("http://localhost:8000/planets");
+		URI uri = URI.create("http://localhost:5000/planets");
 		
 		List<Planet> allThePlanets =  this.restTemplate.getForObject(uri, List.class);
 		
@@ -58,4 +57,16 @@ public class PlanetService {
 		
 	}
 
+	@HystrixCommand(fallbackMethod = "evenMoreReliable")
+	public List<Planet> securePlanetMethod(){
+		List<Planet> rockyPlanets = new ArrayList<Planet>();
+		
+		rockyPlanets.add(new Planet(1000, "Good old reliable", true, 1.0));
+		
+		return rockyPlanets;
+	}
+	
+	public List<Planet> evenMoreReliable(){
+		return null;
+	}
 }

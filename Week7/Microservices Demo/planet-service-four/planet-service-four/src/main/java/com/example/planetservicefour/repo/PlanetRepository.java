@@ -24,7 +24,7 @@ public class PlanetRepository {
 	RestTemplate restTemplate; //This will be used to communicate with our other REST based APIs 
 	
 	public String whatIsPlanetOneSaying() {
-		URI uri = URI.create("http://localhost:9000/test/hello");
+		URI uri = URI.create("http://localhost:5000/test/hello");
 		
 		String planetOneResponse = restTemplate.getForObject(uri, String.class);
 		
@@ -35,7 +35,7 @@ public class PlanetRepository {
 	
 	public List<Planet> whatIsPlanetTwoSaying(){
 		
-		URI uri = URI.create("http://localhost:8000/planets");
+		URI uri = URI.create("http://localhost:5000/planets");
 		
 		List<Planet> planets = restTemplate.getForObject(uri, List.class);
 		
@@ -46,7 +46,7 @@ public class PlanetRepository {
 	
 	public List<Planet> whatIsPlanetThreeSaying(){
 		
-		URI uri = URI.create("http://localhost:7000/planets/rocky");
+		URI uri = URI.create("http://localhost:5000/planets/rocky");
 		
 		List<Planet> planets = restTemplate.getForObject(uri, List.class);
 		

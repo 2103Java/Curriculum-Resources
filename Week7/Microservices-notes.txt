@@ -1,0 +1,31 @@
+Web Service?
+	A service that is offered over a network, in this case the internet. 
+	All we need is a internet connection to levarage it. 
+
+	Why not send a service via a jar file?
+	
+	Platform dependence. 
+		What to do if they can only run C#? 
+		What to do if you're team are Python developers. 
+	Update anomalies. 
+		They'll need to be constantly on the lookout for updates, or be
+		stuck with an outdated version. 
+
+
+Essential aspects of a web service?
+	Available over the internet. 
+	Supports client-server communication 
+	Platform independence. 
+	Discoverable
+
+Monolithic application?
+	An application which everything is handled by a single service 
+
+Benefits of SOA
+	Modular business services 
+	Code reuse
+	Scalability 
+	Language Independent 
+
+Microservices
+	
